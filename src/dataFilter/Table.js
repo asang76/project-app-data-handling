@@ -2,13 +2,14 @@ import React from 'react'
 import moment from 'moment'
 import { FaApple } from 'react-icons/fa'
 import { DiAndroid } from "react-icons/di";
+import './table.css'
 const Table = ({data, column}) => {
   return (
-    <div>
+    <div className='table-wrapper-scroll-x my-custom-scrollbar'>
           
-<table class="table text-light  rounded"style={{background:"#283046"}}> 
+<table class="table text-light  rounded"style={{background:"#213046"}}> 
 {/* created a table in bootstrap  */}
-  <thead style={{background:"#271C1C"}}>
+  <thead className='thead-dark' style={{background:""}}>
     <tr>
         {/* mapped the values through props from the tabledata component to the column   */}
      {column.map((item , index) => <TableHeadItem item={item}  key={index}/>)}
@@ -23,7 +24,7 @@ const Table = ({data, column}) => {
   )
 }
 
-const TableHeadItem = ({item}) => <th>{item.heading}</th>
+const TableHeadItem = ({item}) => <th className='text-center p-3'  >{item.heading}</th>
 const TableRowItem = ({item})=> {
 //    mapped the values from pros from the tabledata component
     return <tr>

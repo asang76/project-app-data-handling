@@ -24,8 +24,8 @@ const Datafilter = () => {
   return (
     <div className="container ">
         
-      <div className="row">
-        <div className="col-lg-12">
+      <div className="row ">
+        <div className="col-lg-12 mt-3">
           <section className="container-fx text-light rounded m-1" style={{background:"#283046"}}>
             <ul className="p-4 d-flex flex-wrap align-items-center">
               {/* fetched dashboard data from given api in li using bootstrap */}

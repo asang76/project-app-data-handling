@@ -74,7 +74,7 @@ const [show, setShow] = useState(false);
   ];
 
   return (
-    <div className="containier text-light rounded "  style={{background:"#283046"}}>
+    <div className="containier text-light rounded mt-3"  style={{background:"#213046"}}>
       <div className=" d-flex justify-content-between p-2">
         <div className="d-flex">
           <h4 className="p-2">show</h4>
@@ -89,16 +89,21 @@ const [show, setShow] = useState(false);
           <span className="fs-4 m-2">Entries</span>
         </div>
         <div className="calender position-relative">
-          <button className="btn text-light " onClick={()=>setShow(!show) }  >select Duration</button>
-{/* imported the dataRange component from the package for better use */}
-{
+          <button className="btn text-dark  bg-light" onClick={()=>setShow(!show) }>select date</button>
+          <div onMouseLeave={()=>setShow(false)}  className="position-absolute end-50 top-100">
+          {
  show?<DateRange
-    className="position-absolute end-50 top-100"
+   
     onChange={(item) => filterList(item)}
     moveRangeOnFirstSelection={false}
     ranges={state}
+    
   />:null
 }
+
+          </div>
+{/* imported the dataRange component from the package for better use */}
+
         </div>
       </div>
       {/* mapping the pages data for using 50 values per page */}
