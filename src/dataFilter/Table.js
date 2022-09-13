@@ -7,9 +7,9 @@ const Table = ({data, column}) => {
   return (
     <div className='table-wrapper-scroll-x my-custom-scrollbar'>
           
-<table class="table text-light  rounded"style={{background:"#213046"}}> 
+<table className="table text-light rounded"style={{background:"#213046"}}> 
 {/* created a table in bootstrap  */}
-  <thead className='thead-dark' style={{background:""}}>
+  <thead className='' style={{background:""}}>
     <tr>
         {/* mapped the values through props from the tabledata component to the column   */}
      {column.map((item , index) => <TableHeadItem item={item}  key={index}/>)}
@@ -24,11 +24,12 @@ const Table = ({data, column}) => {
   )
 }
 
-const TableHeadItem = ({item}) => <th className='text-center p-3'  >{item.heading}</th>
+const TableHeadItem = ({item}) => <th className=''><span className='p-2 m-2 rounded bg-dark'>{item.heading}</span></th>
 const TableRowItem = ({item})=> {
 //    mapped the values from pros from the tabledata component
+
     return <tr>
-        <td>{moment(item.created_At).format('YYYY-MM-DD')}</td>
+        <td>{moment(item.created_At).format('YYYY-MMMM-DD')}</td>
         <td>{item.totalinstall}</td>
         <td><DiAndroid/>{item.android_install} <p><FaApple/>{item.ios_install}</p> </td>
         <td>{item.totaluninstall}</td>
