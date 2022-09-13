@@ -19,9 +19,9 @@ import './App.css';
 
 const drawerWidth = 240;
 
-function App(props) {
+function App() {
   
-  const { window } = props;
+  
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
@@ -119,7 +119,7 @@ function App(props) {
           {drawer}
         </Drawer>
       </Box>
-      <Box>
+      <Box container>
        
        <Datafilter/>
       </Box>
