@@ -1,19 +1,12 @@
-import {useState} from 'react'
-
 import Datafilter from './dataFilter/Datafilter';
 import './App.css';
 
-
-
 function App() {
-(
-<div>
-  <Datafilter/>
-
-</div>
+  return (
+    <div className="App ">
     
-      
-    
+  < Datafilter/>
+    </div>
   );
 }
 

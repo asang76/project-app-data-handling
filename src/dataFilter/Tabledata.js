@@ -126,7 +126,7 @@ const [show, setShow] = useState(false);
             ) }
          
           <li className="page-item">
-            <a className="page-link" href="#">
+            <a className="page-link" >
               Next
             </a>
           </li>
